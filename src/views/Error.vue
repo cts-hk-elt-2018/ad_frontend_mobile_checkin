@@ -31,11 +31,11 @@ export default {
   border: none;
   background: transparent;
   font-size: 3.8vh;
-  font-weight: bold;
+  font-weight: 500;
   box-sizing: border-box;
-  font-family: "Montserrat";
   padding-top: 8%;
   padding-bottom: 9%;
+  font-family: "TT Norms";
   outline: none;
   appearance: unset !important;
   -moz-appearance: unset !important;

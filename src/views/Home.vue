@@ -126,9 +126,9 @@ input {
   border-bottom: 3px solid #ebebeb;
   background: transparent;
   font-size: 3vh;
-  font-weight: bold;
+  font-weight: 500;
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "TT Norms";
   padding-top: 15%;
   padding-bottom: 5%;
   outline: none;
