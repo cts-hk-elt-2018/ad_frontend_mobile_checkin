@@ -4,26 +4,37 @@
       <div class="container">
         <div class="wizard">
           <div class="content">
-            <input name="username" type="number" placeholder="Your staff ID" v-model="username" max="999999" maxlength="6" oninput="this.value=this.value.slice(0,this.maxLength)" required />
+            <input
+              name="username"
+              type="number"
+              placeholder="Your staff ID"
+              v-model="username"
+              max="999999"
+              maxlength="6"
+              oninput="this.value=this.value.slice(0,this.maxLength)"
+              required
+            />
           </div>
           <div class="action">
             <button v-on:click="next();">
               <svg style="width:60%;height:60%" viewBox="0 0 24 24">
-                <path fill="#FFFFFF" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                <path
+                  fill="#FFFFFF"
+                  d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+                />
               </svg>
             </button>
           </div>
         </div>
       </div>
     </div>
-    <div class="cover cover1">
-    </div>
+    <div class="cover cover1"></div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-import NProgress from 'nprogress';
+import axios from "axios";
+import NProgress from "nprogress";
 
 export default {
   name: "home",
@@ -38,23 +49,27 @@ export default {
   },
   methods: {
     next() {
-      if (this.username != '' && this.username != null) {
+      if (this.username != "" && this.username != null) {
         this.isDisabled = true;
-        NProgress.configure({ parent: '.cover' });
+        NProgress.configure({ parent: ".cover" });
         NProgress.start();
         let vue = this;
-        axios.post(' http://ad-backend.fqs3taypzi.ap-southeast-1.elasticbeanstalk.com/api/public/checkin/', {
-          username: vue.username,
-          eventId: '1'
-        })
-        .then(function (response) {
-          NProgress.done();
-          vue.$router.push({ name: 'success' });
-        })
-        .catch(function (error) {
-          NProgress.done();
-          vue.$router.push({ name: 'error' });
-        });
+        axios
+          .post(
+            "http://ad-backend.fqs3taypzi.ap-southeast-1.elasticbeanstalk.com/api/public/checkin/",
+            {
+              username: vue.username,
+              eventId: "1"
+            }
+          )
+          .then(function() {
+            NProgress.done();
+            vue.$router.push({ name: "success" });
+          })
+          .catch(function() {
+            NProgress.done();
+            vue.$router.push({ name: "error" });
+          });
       }
     }
   }
@@ -113,7 +128,7 @@ input {
   font-size: 3vh;
   font-weight: bold;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   padding-top: 15%;
   padding-bottom: 5%;
   outline: none;
@@ -162,7 +177,7 @@ button {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  z-index:100;
+  z-index: 100;
 }
 #nprogress .bar {
   background: #00b140;

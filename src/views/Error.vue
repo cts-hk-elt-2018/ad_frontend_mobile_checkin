@@ -5,14 +5,13 @@
         <p id="error">Please contact our flight attendant.</p>
       </div>
     </div>
-    <div class="cover cover3">
-    </div>
+    <div class="cover cover3"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "error",
+  name: "error"
 };
 </script>
 
@@ -34,7 +33,7 @@ export default {
   font-size: 3.8vh;
   font-weight: bold;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   padding-top: 8%;
   padding-bottom: 9%;
   outline: none;
