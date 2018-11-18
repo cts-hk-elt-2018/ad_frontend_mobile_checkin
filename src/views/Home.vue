@@ -100,7 +100,7 @@ export default {
   -ms-box-shadow: 0px 3px 9.5px 0.5px rgba(0, 0, 0, 0.1);
 }
 .cover1 {
-  width: 100%;
+  width: 100vw;
   height: 50vh;
   background: #0033a0;
   position: absolute;

@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss">
 .cover3 {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: #0033a0;
   position: absolute;
@@ -43,17 +43,17 @@ export default {
   bottom: 0px;
 }
 #success {
+  position: absolute;
   margin: 0 auto;
   width: 95%;
-  height: 100%;
   border: none;
   background: transparent;
   font-size: 3.8vh;
   font-weight: 500;
   box-sizing: border-box;
-  padding-top: 8%;
-  padding-bottom: 9%;
   font-family: "TT Norms";
+  top: 50%;
+  transform: translateY(-50%);
   outline: none;
   appearance: unset !important;
   -moz-appearance: unset !important;
